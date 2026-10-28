@@ -1,0 +1,15 @@
+{
+  "name": "pulselens",
+  "version": "1.0.0",
+  "description": "PulseLens - Automated Feedback & Sentiment Analytics Platform",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run server --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run start --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
