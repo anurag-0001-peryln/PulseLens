@@ -1,6 +1,6 @@
 # 📊 PulseLens: Automated Feedback & Sentiment Analytics Platform
 
-> A full-stack data product and analytics pipeline built with the MERN stack and Groq Cloud API (Llama 3). PulseLens automates the ingestion, classification, and visual reporting of unstructured customer feedback in real time.
+> A full-stack data product and analytics pipeline built with the MERN stack and Groq Cloud API (`openai/gpt-oss-120b`). PulseLens automates the ingestion, classification, and visual reporting of unstructured customer feedback in real time.
 
 ---
 
@@ -9,7 +9,7 @@
 Manual classification of user reviews and bug reports is slow and difficult to scale. **PulseLens** solves this by providing an end-to-end feedback intelligence pipeline:
 
 1. **Ingests** unstructured parent/student reviews via single web submissions or batch CSV uploads.
-2. **Classifies** text using Groq Cloud API (`llama-3.3-70b-versatile`) with native **JSON Mode** to extract sentiment, issue categories, summaries, and confidence scores in **<350ms**.
+2. **Classifies** text using Groq Cloud API (`openai/gpt-oss-120b`) with native **JSON Mode** to extract sentiment, issue categories, summaries, and confidence scores in **<350ms**.
 3. **Aggregates** metrics through optimized MongoDB multi-stage `$facet` pipelines over compound indexes in a single database round-trip.
 4. **Visualizes** actionable insights, sentiment distributions, and category breakdowns on an interactive React dashboard.
 
@@ -20,9 +20,9 @@ Manual classification of user reviews and bug reports is slow and difficult to s
 | Layer | Technologies |
 |---|---|
 | **Frontend** | React.js (Vite), Tailwind CSS, Recharts, Lucide React, Axios |
-| **Backend** | Node.js (ES Modules), Express.js, Multer, csv-parser |
-| **Database** | MongoDB Atlas, Mongoose (Compound B-tree Indexing) |
-| **AI / Inference** | Groq Cloud API (`llama-3.3-70b-versatile` / Llama 3) via JSON Mode |
+| **Backend** | Node.js, Express.js, Multer, csv-parser |
+| **Database** | MongoDB Atlas, Mongoose  |
+| **AI / Inference** | Groq Cloud API (`openai/gpt-oss-120b`) |
 
 ---
 
